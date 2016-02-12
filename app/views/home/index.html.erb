@@ -1,0 +1,12 @@
+<h1>Home#index</h1>
+
+<%= form_tag "/search" do %>
+	<%= text_field_tag :query %>
+	<%= submit_tag %>  
+<% end %>
+
+<% if @results %>
+	<% @results.each do |result| %>
+	<p><%=  result["trackName"] %></p>
+	<% end %>
+<% end %>
